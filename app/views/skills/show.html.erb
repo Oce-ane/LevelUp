@@ -1,11 +1,17 @@
 <div class="container">
   <h1><%= @skill.name %></h1>
-  <p><%= @skill.description %></p>
-  <% @skill.levels.each do |level| %>
-  <h5><%= level.name %></h5>
-  <p><%= level.exercise %></p>
-  <%= form_with model: @level do |form| %>
-    <%= form.check_box :completed %>
-  <% end %>
+  <br>
+  <p><%= @skill.description.lines('.').first %></p>
+  <p><%= @skill.description.lines('.').second %></p>
+  <p><%= @skill.description.lines('.').third %></p>
+  <% @skill.levels.each_with_index do |level, index| %>
+  <h5><%= "##{index + 1} - #{level.name}" %></h5>
+  <p><%= level.exercise.split('. ')[0...-1].join('. ') + '.' %></p>
+  <div class="card-status">
+    <p><%= level.exercise.lines('.').last %></p>
+    <%= form_with model: @level do |form| %>
+      <%= form.check_box :completed, checked: level.completed, data: { id: level.id, remote: true } %>
+    <% end %>
+  </div>
   <% end %>
 </div>

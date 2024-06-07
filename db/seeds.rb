@@ -8,61 +8,47 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 puts 'Cleaning database'
+Level.destroy_all
 Skill.destroy_all
 
 puts 'Creating skills and their levels'
 push_up = Skill.create!(
   name: 'Push-up',
-  description: 'A push-up is a bodyweight exercise performed in a prone position by raising and lowering the body using the arms. This exercise targets multiple muscle groups and is fundamental for building upper body strength. This exercise primarily targets the pectoralis major (chest), triceps brachii (back of the arms), and deltoids (shoulders), while also engaging the core muscles, including the rectus abdominis and obliques, as well as the serratus anterior and lower back muscles. Push-ups improve upper body strength, enhancing the ability to perform various physical tasks such as pushing open heavy doors or lifting objects. They also strengthen the core, improving balance and stability, which helps in maintaining good posture and preventing injuries. Additionally, push-ups increase the ability to catch oneself and stabilize when tripping or falling forward, reducing the risk of injury, and improve overall functional fitness, making everyday activities easier and more efficient, from carrying groceries to playing with children.',
+  description: 'A push-up is a bodyweight exercise performed in a prone position by raising and lowering the body using the arms. This exercise primarily targets the pectoralis major (chest), triceps brachii (back of the arms), and deltoids (shoulders), while also engaging the core muscles, including the rectus abdominis and obliques, as well as the serratus anterior and lower back muscles. Push-ups improve upper body strength, enhancing the ability to perform various physical tasks such as pushing open heavy doors or lifting objects. They also strengthen the core, improving balance and stability, which helps in maintaining good posture and preventing injuries. Additionally, push-ups increase the ability to catch oneself and stabilize when tripping or falling forward, reducing the risk of injury, and improve overall functional fitness, making everyday activities easier and more efficient, from carrying groceries to playing with children.',
   progression: 0
 )
 Level.create!(
   name: 'Wall push-ups',
-  exercise: 'A classic, gentle pushing movement!
-
-Hands slightly below shoulder height. Wrists should feel slightly stretched when arms fully extended. Stand about arms-length away from the wall.
-
-Standard: 3 Sets of 50',
+  exercise: 'A classic, gentle pushing movement! Hands slightly below shoulder height. Wrists should feel slightly stretched when arms fully extended. Stand about arms-length away from the wall.
+  Standard: 3 Sets of 50',
   completed: false,
   skill_id: push_up.id
 )
 Level.create!(
   name: 'Incline push-ups',
-  exercise: 'Introducing us to diagonal pushing!
-
-Start with something around sternum height. The lower the base, the harder this exercise becomes. Lower yourself until your chest gently touches the base. Your hands should be around sternum height by your ribs at the bottom of the movement.
-
-Standard: 3 Sets of 40',
+  exercise: 'Introducing us to diagonal pushing! Start with something around sternum height. The lower the base, the harder this exercise becomes. Lower yourself until your chest gently touches the base. Your hands should be around sternum height by your ribs at the bottom of the movement.
+  Standard: 3 Sets of 40',
   completed: false,
   skill_id: push_up.id
 )
 Level.create!(
   name: 'Advanced incline push-ups',
-  exercise: 'Using a lower base prepares our body for horizontal pushing!
-
-Start with something around hip height. The lower the base, the harder this exercise becomes. Lower yourself until your chest gently touches the base. Your hands should be by your ribs at the bottom of the movement.
-
-Standard: 3 Sets of 35',
+  exercise: 'Using a lower base prepares our body for horizontal pushing! Start with something around hip height. The lower the base, the harder this exercise becomes. Lower yourself until your chest gently touches the base. Your hands should be by your ribs at the bottom of the movement.
+  Standard: 3 Sets of 35',
   completed: false,
   skill_id: push_up.id
 )
 Level.create!(
   name: 'Knee push-ups',
-  exercise: 'Finally touching ground for horizontal pushing!
-
-These are slightly easier than Full Pushups because the knees are used as a pivot instead of the feet. Start with your arms straight and knuckles beneath your shoulders. Lower smoothly until your chest gently touches the floor and your hands are by your ribs. Pause for a moment before coming back up
-
-Standard: 3 Sets of 30',
+  exercise: 'Finally touching ground for horizontal pushing! These are slightly easier than Full Pushups because the knees are used as a pivot instead of the feet. Start with your arms straight and knuckles beneath your shoulders. Lower smoothly until your chest gently touches the floor and your hands are by your ribs. Pause for a moment before coming back up.
+  Standard: 3 Sets of 30',
   completed: false,
   skill_id: push_up.id
 )
 Level.create!(
   name: 'Full push-ups',
-  exercise: 'The famous bodyweight pushing movement!
-
-Your body should be relatively straight from your shoulders to your toes. You don’t have to look forward. Start with your arms straight and knuckles below your shoulders. Lower smoothly until your chest touches the ground. Pause briefly before coming back up. Keep your abs braced! Don’t allow your lower back to sag.
-
-Standard: 3 Sets of 25',
+  exercise: 'The famous bodyweight pushing movement! Your body should be relatively straight from your shoulders to your toes. You don’t have to look forward. Start with your arms straight and knuckles below your shoulders. Lower smoothly until your chest touches the ground. Pause briefly before coming back up. Keep your abs braced! Don’t allow your lower back to sag.
+  Standard: 3 Sets of 25',
   completed: false,
   skill_id: push_up.id
 )
