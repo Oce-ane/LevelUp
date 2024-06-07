@@ -1,7 +1,7 @@
 <div class="container">
-  <button class="large">💪</button>
+  <button class="large" id="select-skills-btn">💪</button>
   <div class="cards">
-    <% @skills.each do |skill| %>
+    <% @selected_skills.each do |skill| %>
       <%= link_to skill_path(skill) do %>
         <div class="card">
           <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}"%>
@@ -13,4 +13,14 @@
       <% end %>
     <% end %>
   </div>
+</div>
+<!-- Modal for selecting skills -->
+<div id="skills-modal" style="display: none;">
+  <% @all_skills.each do |skill| %>
+    <div class="skill-selection">
+      <%= check_box_tag "skill_ids[]", skill.id, @selected_skill_ids.include?(skill.id) %>
+      <%= skill.name %>
+    </div>
+  <% end %>
+  <button id="save-skills-btn">Save</button>
 </div>
