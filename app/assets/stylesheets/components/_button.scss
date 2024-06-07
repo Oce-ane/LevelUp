@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+
+.btn {
+  border-radius:8px;
+  background-color: $red;
+  color: white;
+  border: none;
+  width: 45%;
+  min-width: 100px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: $button-font;
+}
+.small {
+  border-radius: 8px;
+  background-color: $red;
+  color: white;
+  border: none;
+  width: 25%;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.large {
+  border-radius:8px;
+  background-color: $red;
+  color: white;
+  border: none;
+  min-width: 370px;
+  height: 40px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: $headers-font;
+  font-weight: 400;
+  font-style: normal;
+  color: $gray;
+  letter-spacing: 1vw;
+  letter-spacing: 0.2rem;
+}
+.btn:hover {
+  background-color: #8a00009e;
+}

@@ -1,2 +1,11 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="homepage">
+  <div class="title">
+    <h1>LEVEL UP</h1>
+    <h3>GAINING NEW SKILLS HAS NEVER BEEN EASIER</h3>
+  </div>
+  <div class="button">
+    <%= link_to skills_path do %>
+      <button class ="btn large">ENTER</button>
+    <% end %>
+  </div>
+</div>

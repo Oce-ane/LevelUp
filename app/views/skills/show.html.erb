@@ -1,0 +1,11 @@
+<div class="container">
+  <h1><%= @skill.name %></h1>
+  <p><%= @skill.description %></p>
+  <% @skill.levels.each do |level| %>
+  <h5><%= level.name %></h5>
+  <p><%= level.exercise %></p>
+  <%= form_with model: @level do |form| %>
+    <%= form.check_box :completed %>
+  <% end %>
+  <% end %>
+</div>

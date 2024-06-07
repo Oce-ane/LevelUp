@@ -1,0 +1,16 @@
+<div class="container">
+  <button class="large">💪</button>
+  <div class="cards">
+    <% @skills.each do |skill| %>
+      <%= link_to skill_path(skill) do %>
+        <div class="card">
+          <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}"%>
+          <div class="card-body">
+            <h4 class="card-title"><%= skill.name %></h4>
+            <p class="card-text"><%= skill.progression %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
