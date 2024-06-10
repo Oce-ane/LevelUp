@@ -1,6 +1,17 @@
 <div class="container">
-  
-  <button class="large" id="select-skills-btn">💪</button>
+  <div class="dropdown">
+    <button class="btn large btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      💪
+    </button>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item" href="#">Handstand</a></li>
+      <li><a class="dropdown-item" href="#">L-sit</a></li>
+      <li><a class="dropdown-item" href="#">Pull-up</a></li>
+      <li><a class="dropdown-item" href="#">Push-up</a></li>
+      <li><a class="dropdown-item" href="#">Split</a></li>
+      <li><a class="dropdown-item" href="#">Squat</a></li>
+    </ul>
+  </div>
   <div class="cards">
     <% @selected_skills.each do |skill| %>
       <%= link_to skill_path(skill) do %>
