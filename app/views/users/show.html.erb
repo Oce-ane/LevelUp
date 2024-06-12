@@ -1,7 +1,11 @@
 <div class="container">
   <div class="profile">
     <div class="profile-pic-area mt-4">
-    <%= image_tag("homepage.webp", class: "avatar-large") %>
+      <% if @user.profile_picture.attached? %>
+        <%= image_tag @user.profile_picture, class: "avatar-large" %>
+      <% else %>
+        <%= image_tag("homepage.webp", class: "avatar-large") %>
+      <% end %>
     </div>
     <div data-controller="toggle" class="mt-5">
       <div class="info">
@@ -21,20 +25,20 @@
         <div class="edit">
           <p><strong>Edit</strong></p>
           <%= link_to edit_user_registration_path do %>
-            <button class ="btn profile-edit"><i class="fa-solid fa-pen-to-square"></i></button>
+            <button class="btn profile-edit"><i class="fa-solid fa-pen-to-square"></i></button>
           <% end %>
         </div>
         <hr>
         <div class="delete">
           <p><strong>Delete account</strong></p>
           <%= link_to edit_user_registration_path do %>
-            <button class ="btn red"><i class="fa-solid fa-user-xmark"></i></button>
+            <button class="btn red"><i class="fa-solid fa-user-xmark"></i></button>
           <% end %>
         </div>
       </div>
       <div class="logout-btn">
         <%= link_to edit_user_registration_path do %>
-          <button class ="btn large">LOG OUT</button>
+          <button class="btn large">LOG OUT</button>
         <% end %>
       </div>
     </div>
