@@ -9,12 +9,12 @@ class UsersController < ApplicationController
     @user = current_user
   end
 
-  # def update_skills
-  #   current_user.skill_ids = params[:skill_ids]
-  #   if current_user.save
-  #     head :ok
-  #   else
-  #     head :unprocessable_entity
-  #   end
-  # end
+  def update_skills
+    current_user.skill_ids = params[:skill_ids]
+    if current_user.save
+      head :ok
+    else
+      head :unprocessable_entity
+    end
+  end
 end
