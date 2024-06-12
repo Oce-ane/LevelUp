@@ -19,7 +19,9 @@
           <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}"%>
           <div class="card-body">
             <h4 class="card-title"><%= skill.name %></h4>
-            <p class="card-text"><%= skill.progression %></p>
+            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="<%= skill.progression %>" aria-valuemin="0" aria-valuemax="100" style="height: 20px">
+              <div class="progress-bar" style="width: 25%"><%= skill.progression %></div>
+            </div>
           </div>
         </div>
       <% end %>
