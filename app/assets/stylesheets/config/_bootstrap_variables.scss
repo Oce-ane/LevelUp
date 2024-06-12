@@ -26,12 +26,4 @@ $border-radius-xl:            .5rem;
 $border-radius-xxl:           1rem;
 
 // Override other variables below!
-$progress-height:                   2rem;
-$progress-font-size:                $font-size-base * .75;
-$progress-bg:                       var(--#{$prefix}secondary-bg);
-$progress-border-radius:            var(--#{$prefix}border-radius);
-$progress-box-shadow:               var(--#{$prefix}box-shadow-inset);
-$progress-bar-color:                $white;
-$progress-bar-bg:                   #8A0000;
-$progress-bar-animation-timing:     1s linear infinite;
-$progress-bar-transition:           width .6s ease;
+

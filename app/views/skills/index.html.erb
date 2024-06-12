@@ -21,7 +21,7 @@
            <div class="card-body">
               <h4 class="card-title"><%= skill.name %></h4>
               <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="<%= skill.progression %>" aria-valuemin="0" aria-valuemax="100">
-                <% if skill.progression < 100 > %>
+                <% if skill.progression < 100 %>
                   <div class="progress-bar bg-danger overflow-visible text-dark fw-bold" style="width: <%= skill.progression %>%"><%= skill.progression %>%</div>
                 <% else %>
                   <div class="progress-full"><p>You have mastered this skill 💪</p></div>
