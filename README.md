@@ -14,7 +14,6 @@ Skill Progression Tracker is a web application designed to help users follow the
 <h3>Technologies Used</h3>
 
 - **Backend:** Ruby on Rails
-- **Frontend:** React
 - **Database:** PostgreSQL (or any preferred database)
 - **Background Jobs:** Sidekiq (for notifications)
 
@@ -22,8 +21,6 @@ Skill Progression Tracker is a web application designed to help users follow the
 
 This project is currently a work in progress. The following features are under development:
 
-- Integration of Rails with React
-- Database schema design and implementation
 - Progress calculation logic
 - Notification system setup
 
@@ -34,8 +31,8 @@ To run this project locally:
 1. **Clone the repository:**
 
 ```bash
-git clone https://github.com/yourusername/skill-progression-tracker.git
-cd skill-progression-tracker
+git clone https://github.com/yourusername/LevelUp.git
+cd LevelUp
 ```
 2. **Set up the backend:**
 
@@ -49,26 +46,14 @@ bundle install
 rails db:create db:migrate db:seed
 ```
 
-3. **Set up the frontend:**
-
-- Install dependencies:
-```bash
-npm install
-```
-
-4. **Run the application:**
+3. **Run the application:**
 
 - Start the Rails server:
 ```bash
 rails server
 ```
 
-- In a separate terminal, start the React development server:
-```bash
-npm start
-```
-
-5. **Open the application:**
+4. **Open the application:**
 
 Visit `http://localhost:3000` in your browser.
 
@@ -79,5 +64,3 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 <h3>License</h3>
 
 This project is licensed under the MIT License.
-
-
