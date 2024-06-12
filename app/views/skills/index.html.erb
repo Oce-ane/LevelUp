@@ -1,29 +1,30 @@
 <div class="container" data-controller="skills" data-skills-user-id="<%= current_user.id %>">
-  <div class="dropdown">
-    <button class="btn large btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-      💪
-    </button>
-    <ul class="dropdown-menu">
-      <% @all_skills.each do |skill| %>
-        <li>
-          <a class="dropdown-item" href="#" data-action="click->skills#toggleSkill" data-skill-id="<%= skill.id %>">
-            <%= skill.name %>
-          </a>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-  <div class="cards">
-    <% @selected_skills.each do |skill| %>
-      <%= link_to skill_path(skill) do %>
-        <div class="card">
-          <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}" %>
-          <div class="card-body">
-            <h4 class="card-title"><%= skill.name %></h4>
-            <p class="card-text"><%= skill.progression %>%</p>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
-  </div>
-</div>
+   <div class="dropdown">
+     <button class="btn large btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+       💪
+     </button>
+     <ul class="dropdown-menu">
+       <% @all_skills.each do |skill| %>
+         <li>
+           <a class="dropdown-item" href="#" data-action="click->skills#toggleSkill" data-skill-id="<%= skill.id %>">
+             <%= skill.name %>
+           </a>
+         </li>
+       <% end %>
+     </ul>
+   </div>
+   <div class="cards">
+     <% @selected_skills.each do |skill| %>
+       <%= link_to skill_path(skill) do %>
+         <div class="card">
+           <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}" %>
+           <div class="card-body">
+             <h4 class="card-title"><%= skill.name %></h4>
+             <p class="card-text"><%= skill.progression %>%</p>
+           </div>
+         </div>
+       <% end %>
+     <% end %>
+   </div>
+ </div>
+
