@@ -1,38 +1,29 @@
-<div class="container">
+<div class="container" data-controller="skills" data-skills-user-id="<%= current_user.id %>">
   <div class="dropdown">
     <button class="btn large btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
       💪
     </button>
     <ul class="dropdown-menu">
-      <li><a class="dropdown-item" href="#">Handstand</a></li>
-      <li><a class="dropdown-item" href="#">L-sit</a></li>
-      <li><a class="dropdown-item" href="#">Pull-up</a></li>
-      <li><a class="dropdown-item" href="#">Push-up</a></li>
-      <li><a class="dropdown-item" href="#">Split</a></li>
-      <li><a class="dropdown-item" href="#">Squat</a></li>
+      <% @all_skills.each do |skill| %>
+        <li>
+          <a class="dropdown-item" href="#" data-action="click->skills#toggleSkill" data-skill-id="<%= skill.id %>">
+            <%= skill.name %>
+          </a>
+        </li>
+      <% end %>
     </ul>
   </div>
   <div class="cards">
     <% @selected_skills.each do |skill| %>
       <%= link_to skill_path(skill) do %>
         <div class="card">
-          <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}"%>
+          <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}" %>
           <div class="card-body">
             <h4 class="card-title"><%= skill.name %></h4>
-            <p class="card-text"><%= skill.progression %></p>
+            <p class="card-text"><%= skill.progression %>%</p>
           </div>
         </div>
       <% end %>
     <% end %>
   </div>
-</div>
-<!-- Modal for selecting skills -->
-<div id="skills-modal" style="display: none;">
-  <% @all_skills.each do |skill| %>
-    <div class="skill-selection">
-      <%= check_box_tag "skill_ids[]", skill.id, @selected_skill_ids.include?(skill.id) %>
-      <%= skill.name %>
-    </div>
-  <% end %>
-  <button id="save-skills-btn">Save</button>
 </div>

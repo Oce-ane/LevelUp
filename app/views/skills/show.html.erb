@@ -1,17 +1,17 @@
-<div class="container">
+<div class="container" data-controller="levels" data-levels-skill-id-value="<%= @skill.id %>">
   <h1><%= @skill.name %></h1>
   <br>
   <p><%= @skill.description.lines('.').first %></p>
   <p><%= @skill.description.lines('.').second %></p>
   <p><%= @skill.description.lines('.').third %></p>
   <% @skill.levels.each_with_index do |level, index| %>
-  <h5><%= "##{index + 1} - #{level.name}" %></h5>
-  <p><%= level.exercise.split('. ')[0...-1].join('. ') + '.' %></p>
-  <div class="card-status">
-    <p><%= level.exercise.lines('.').last %></p>
-    <%= form_with model: @level do |form| %>
-      <%= form.check_box :completed, checked: level.completed, data: { id: level.id, remote: true } %>
-    <% end %>
-  </div>
+    <h5><%= "##{index + 1} - #{level.name}" %></h5>
+    <p><%= level.exercise.split('. ')[0...-1].join('. ') + '.' %></p>
+    <div class="card-status">
+      <p><%= level.exercise.lines('.').last %></p>
+      <%= form_with model: @level, local: false do |form| %>
+        <%= form.check_box :completed, checked: level.completed, data: { action: 'change->levels#toggle', levels_level_id_value: level.id } %>
+      <% end %>
+    </div>
   <% end %>
 </div>
