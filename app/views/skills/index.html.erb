@@ -1,35 +1,36 @@
-<div class="container" data-controller="skills" data-skills-user-id="<%= current_user.id %>">
-   <div class="dropdown">
-     <button class="btn large btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-       💪
-     </button>
-     <ul class="dropdown-menu">
-       <% @all_skills.each do |skill| %>
-         <li>
-           <a class="dropdown-item" href="#" data-action="click->skills#toggleSkill" data-skill-id="<%= skill.id %>">
-             <%= skill.name %>
-           </a>
-         </li>
-       <% end %>
-     </ul>
-   </div>
-   <div class="cards">
-     <% @selected_skills.each do |skill| %>
-       <%= link_to skill_path(skill) do %>
-         <div class="card">
-           <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}" %>
-           <div class="card-body">
-              <h4 class="card-title"><%= skill.name %></h4>
-              <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="<%= skill.progression %>" aria-valuemin="0" aria-valuemax="100">
-                <% if skill.progression < 100 %>
-                  <div class="progress-bar bg-danger overflow-visible text-dark fw-bold" style="width: <%= skill.progression %>%"><%= skill.progression %>%</div>
-                <% else %>
-                  <div class="progress-full"><p>You have mastered this skill 💪</p></div>
-                <% end %>
-              </div>
+<div class="container" data-controller="skills" data-skills-user-id="<%= current_user.id %>" data-selected-skill-ids="<%= @selected_skill_ids.to_json %>">
+  <div class="dropdown" data-controller="test">
+    <br>
+    <button class="btn large btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      💪
+    </button>
+    <ul class="dropdown-menu">
+      <% @all_skills.each do |skill| %>
+        <li>
+          <a class="dropdown-item" href="#" data-action="click->skills#toggleSkill" data-skill-id="<%= skill.id %>">
+            <%= skill.name %>
+          </a>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="cards">
+    <% @selected_skills.each do |skill| %>
+      <%= link_to skill_path(skill) do %>
+        <div class="card">
+          <%= image_tag "#{skill.name}.webp", class: "card-img", alt: "Card image #{skill.name}" %>
+          <div class="card-body">
+            <h4 class="card-title"><%= skill.name %></h4>
+            <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="<%= skill.progression %>" aria-valuemin="0" aria-valuemax="100">
+              <% if skill.progression < 100 %>
+                <div class="progress-bar bg-danger" style="width: <%= skill.progression %>%"><%= skill.progression %>%</div>
+              <% else %>
+                <div class="progress-full"><p>You have mastered this skill 💪</p></div>
+              <% end %>
             </div>
-         </div>
-       <% end %>
-     <% end %>
-   </div>
- </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>

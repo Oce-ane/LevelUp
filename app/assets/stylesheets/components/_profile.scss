@@ -1,54 +1,48 @@
-.profile-pic-area{
+.profile-pic-area {
   margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.info{
+
+.info {
   display: flex;
   flex-direction: column;
-  #username {
+  .details {
     display: flex;
     flex-direction: row;
     margin-bottom: 8px;
     justify-content: space-between;
     align-items: flex-start;
   }
-  #email{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 8px;
-    justify-content: space-between;
-    align-items: flex-start;
+
+  .form-group {
+    margin-bottom: 1rem;
   }
-  #password{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
+
+  .form-actions {
+    margin-top: 1rem;
   }
-  .edit{
+
+  .edit,
+  .delete {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 16px;
-    p{
+
+    p {
       margin: 0;
     }
   }
-  .delete{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+
+  .delete {
     margin-top: 16px;
-    p{
-      margin: 0;
-    }
   }
 }
-.logout-btn{
+
+.logout-btn {
   position: fixed;
   bottom: 70px;
 }

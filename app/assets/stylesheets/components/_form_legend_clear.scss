@@ -8,3 +8,45 @@
 legend ~ div.form-check:first-of-type {
   clear: left;
 }
+.checkbox-wrapper {
+  position: relative;
+}
+.checkbox-wrapper input[type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+}
+.checkbox-wrapper label {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+.checkbox-wrapper input[type="checkbox"]:checked + label {
+  background-color: $red;
+  border-color: $red;
+}
+.checkbox-wrapper input[type="checkbox"]:checked + label::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.form-label {
+  font-weight: bold;
+}
+.form-control {
+  border-radius: 6px;
+}

@@ -1,13 +1,14 @@
 .navbar {
   justify-content: space-between;
-  background: white;
-}
-
-.navbar .navbar-collapse {
-  flex-grow: 0;
-}
-
-.navbar .navbar-brand img {
-  width: 40px;
+  background: rgb(55, 55, 55);
+  .navbar-collapse {
+    flex-grow: 0;
+  }
+  .navbar-brand img {
+    width: 40px;
+  }
+  .nav-link {
+    color: white;
+  }
 }
 

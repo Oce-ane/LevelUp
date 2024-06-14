@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-
-
 .btn {
-  border-radius:8px;
+  border-radius:6px;
   background-color: $red;
   color: white;
   border: none;
@@ -13,7 +11,7 @@
   font-family: $button-font;
 }
 .small {
-  border-radius: 8px;
+  border-radius: 6px;
   background-color: $red;
   color: white;
   border: none;
@@ -21,7 +19,7 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 .large {
-  border-radius:8px;
+  border-radius:6px;
   background-color: $red;
   color: white;
   border: none;
