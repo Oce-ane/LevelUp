@@ -5,6 +5,10 @@ import { Controller } from "@hotwired/stimulus";
      skillId: Number
    }
 
+   connect() {
+    console.log("Hello, Stimulus!", this.element)
+  }
+
    toggle(event) {
      const completed = event.target.checked;
      const skillId = this.skillIdValue;

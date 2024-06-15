@@ -10,10 +10,7 @@
     <div class="card-status">
       <p><%= level.exercise.lines('.').last %></p>
       <%= form_with model: @level, local: false do |form| %>
-        <div class="checkbox-wrapper">
-          <%= form.check_box :completed, checked: level.completed, data: { action: 'change->levels#toggle', levels_level_id_value: level.id }, id: "level_#{level.id}" %>
-          <label for="level_#{level.id}"></label>
-        </div>
+        <%= form.check_box :completed, checked: level.completed, data: { action: 'change->levels#toggle', levels_level_id_value: level.id } %>
       <% end %>
     </div>
   <% end %>
