@@ -21,7 +21,6 @@ Skill Progression Tracker is a web application designed to help users follow the
 
 This project is currently a work in progress. The following features are under development:
 
-- Progress calculation logic
 - Notification system setup
 
 <h3>Installation</h3>
