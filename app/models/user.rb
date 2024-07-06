@@ -8,4 +8,12 @@ class User < ApplicationRecord
 
   has_many :user_skills
   has_many :skills, through: :user_skills
+
+  after_create :schedule_daily_reminder
+
+  private
+
+  def schedule_daily_reminder
+    ReminderWorker.perform_in(24.hours, self.id)
+  end
 end

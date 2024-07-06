@@ -9,19 +9,19 @@ Skill Progression Tracker is a web application designed to help users follow the
 - **Skill Management:** Add and manage skills with detailed descriptions and progress status.
 - **Step Tracking:** Each skill comprises several steps, each with specific exercises that need to be completed.
 - **Progress Calculation:** Automatically updates the progress percentage based on completed steps and marks the skill as completed when all steps are done.
-- **Daily Notifications:** Users receive notifications thrice a day to remind them to perform their exercises.
+- **Daily Notifications:** Users receive notifications once a day to remind them to perform their exercises.
 
 <h3>Technologies Used</h3>
 
 - **Backend:** Ruby on Rails
 - **Database:** PostgreSQL (or any preferred database)
-- **Background Jobs:** Sidekiq (for notifications)
+- **Background Jobs:** Sidekiq & Redis (for reminders)
 
 <h3>Project Status</h3>
 
 This project is currently a work in progress. The following features are under development:
 
-- Notification system setup
+- Large screen views
 
 <h3>Installation</h3>
 
