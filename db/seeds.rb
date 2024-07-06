@@ -74,14 +74,14 @@ Level.create!(
 )
 Level.create!(
   name: 'Advanced horizontal pull-ups',
-  exercise: 'Pulling from a lower position makes horizontal pullups harder.
+  exercise: 'Pulling from a lower position makes horizontal pullups harder. This will improve the muscle mass involved in pull-ups.
   Volume: 3 Sets of 25',
   completed: false,
   skill_id: pull_up.id
 )
 Level.create!(
   name: 'Jack-knife pull-ups',
-  exercise: 'This introduces vertical pulling with assistance from the legs.
+  exercise: 'This introduces vertical pulling with assistance from the legs. This is still easier than a full pull-ups but still a valuable exercise.
   Volume: 3 Sets of 20',
   completed: false,
   skill_id: pull_up.id

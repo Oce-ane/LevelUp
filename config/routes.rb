@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :skills, only: %i[index show] do
-    resources :levels, only: %i[index update]
+    resources :levels, only: %i[update]
   end
   resources :users, only: %i[show] do
     post :update_skills, on: :member
