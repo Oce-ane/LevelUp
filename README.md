@@ -19,9 +19,9 @@ Skill Progression Tracker is a web application designed to help users follow the
 
 <h3>Project Status</h3>
 
-This project is currently a work in progress. The following features are under development:
+This project is actively developed, with the following features currently under development:
 
-- Large screen views
+- Enhanced support for large screen views.
 
 <h3>Installation</h3>
 
